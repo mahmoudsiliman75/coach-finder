@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand to="/coaches"> <span> Coach </span> Finder</b-navbar-brand>
+      <b-navbar-brand> 
+        <router-link to="/"> <span> Coach </span> Finder </router-link>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -19,10 +21,14 @@
 <style lang="scss" scoped>
 .navbar {
   .navbar-brand {
-    span {
-      font-size: 25px;
-      font-weight: 700;
-      color: #ff7b54;
+    a {
+      text-decoration: none;
+      color: #fff;
+      span {
+        font-size: 25px;
+        font-weight: 700;
+        color: #ff7b54;
+      }
     }
   }
 
