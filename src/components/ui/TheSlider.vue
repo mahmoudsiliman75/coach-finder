@@ -47,8 +47,7 @@
 .carousel {
   .carousel-inner {
     .carousel-item {
-      max-height: 600px;
-      min-height: 600px;
+      height: calc(100vh - 63px);
     }
   }
 }
