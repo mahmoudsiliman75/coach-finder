@@ -11,7 +11,7 @@
       </base-card>
 
       <base-card class="my-4">
-        <div class="controles d-flex justify-content-center align-items-center">
+        <div class="controles d-flex justify-content-around align-items-center">
           <button class="btn btn-dark mx-2"> Refresh </button>
 
           <router-link 

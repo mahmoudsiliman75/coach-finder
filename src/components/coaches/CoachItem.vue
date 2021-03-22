@@ -17,7 +17,9 @@
           </b-badge>
         </div>
 
-        <div class="actions">
+        <div 
+          class="actions d-flex align-items-center justify-content-end"
+        >
           <router-link 
             :to="coachContactLink" 
             class="btn btn-outline-info mx-2"
