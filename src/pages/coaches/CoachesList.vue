@@ -1,22 +1,34 @@
 <template>
-  <div>
+  <div class="all_coaches">
+    <!-- START:: SLIDER -->
     <main-slider></main-slider>
-    <section>
-      <h1> Filters </h1>
-    </section>
+    <!-- END:: SLIDER -->
 
-    <div class="controles">
-      <button> Refresh </button>
-      <router-link to="/register"> Register As A Coach </router-link>
-    </div>
+    <!-- START:: COACHES LIST COMPONENT CONTENT -->
+    <b-container class="mt-3">
+      <base-card class="my-4">
+        <h2 class="text-info text-center"> Filters </h2>
+      </base-card>
 
-    <section>
-      <div
-        v-if="hasCoaches"
-      >
-        <b-container>
+      <base-card class="my-4">
+        <div class="controles d-flex justify-content-center align-items-center">
+          <button class="btn btn-dark mx-2"> Refresh </button>
+
+          <router-link 
+            to="/register" 
+            class="btn btn-outline-primary mx-2"
+          > 
+            Register As A Coach 
+          </router-link>
+        </div>
+      </base-card>
+
+      <section>
+        <div
+          v-if="hasCoaches"
+        >
           <b-row
-            class="justify-content-center py-5"
+            class="justify-content-center my-3"
           >
             <b-col 
               cols="12" 
@@ -33,11 +45,14 @@
               ></coach-item>
             </b-col>
           </b-row>
-        </b-container>
-      </div>
-
-      <h3 v-else> No Coaches Found </h3>
-    </section>
+        </div>
+        
+        <base-card v-else>
+          <h3 class="no_coaches mb-0 text-center"> No Coaches Found </h3>
+        </base-card>
+      </section>
+    </b-container>
+    <!-- END:: COACHES LIST COMPONENT CONTENT -->
   </div>
 </template>
 
@@ -61,3 +76,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .no_coaches {
+    color: #ff7b54;
+  }
+</style>

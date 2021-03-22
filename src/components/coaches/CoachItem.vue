@@ -1,6 +1,7 @@
 <template>
-    <b-list-group>
-      <b-list-group-item class="my-3">
+  <b-list-group>
+    <base-card class="my-3">
+      <b-list-group-item>
         <h3> {{ fullName }} </h3>
         <h5> $ {{ rate }} / Hour </h5>
 
@@ -32,7 +33,8 @@
           </router-link>
         </div>
       </b-list-group-item>
-    </b-list-group>
+    </base-card>
+  </b-list-group>
 </template>
 
 <script>
@@ -57,38 +59,41 @@ export default {
 
 <style lang="scss" scoped>
 
-    .list-group {
-      .list-group-item {
-        box-shadow: 0 0 10px #c1c1c1;
-        border-radius: 15px;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          transform: scale(1.04);
+.list-group {
+  .main_card {
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: scale(1.04);
+    }
+    .list-group-item {
+      border: none;
+      padding: 0;
+      h3 {
+        margin-inline-start: 15px;
+        color: #ff7b54;
+      }
+      h5 {
+        margin-inline-start: 15px;
+        margin-bottom: 0;
+        color: #777;
+      }
+      .badge {
+        &.frontend {
+          background-color: #fdb827;
+          color: #fff;
         }
-        h3 {
-          margin-inline-start: 15px;
-          color: #ff7b54;
+        &.backend {
+          background-color: #34626c;
+          color: #fff;
         }
-        h5 {
-          margin-inline-start: 15px;
-          margin-bottom: 0;
-          color: #777;
-        }
-        .badge {
-          &.frontend {
-            background-color: #fdb827;
-            color: #fff;
-          }
-          &.backend {
-            background-color: #34626c;
-            color: #fff;
-          }
-          &.career {
-            background-color: #6155a6;
-            color: #fff;
-          }
+        &.career {
+          background-color: #6155a6;
+          color: #fff;
         }
       }
     }
+  }
+
+}
 
 </style>
