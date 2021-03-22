@@ -2,15 +2,18 @@
   <div class="main_wraper">
     <nav-bar></nav-bar>
     <router-view></router-view>
+    <the-footer></the-footer>
   </div>
 </template>
 
 <script>
 import TheNavbar from "./components/layouts/TheNavbar.vue";
+import TheFooter from "./components/layouts/TheFooter.vue";
 
 export default {
   components: {
     "nav-bar":TheNavbar,
+    "the-footer": TheFooter,
   },
 }
 </script>
