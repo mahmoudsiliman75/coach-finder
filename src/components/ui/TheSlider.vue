@@ -13,7 +13,7 @@
 
       <!-- Slides with custom text -->
       <b-carousel-slide 
-        caption="First slide"
+        caption="Second slide"
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
         img-src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
       >

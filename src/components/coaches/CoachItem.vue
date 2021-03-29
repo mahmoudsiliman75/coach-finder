@@ -45,7 +45,7 @@ export default {
 
   computed: {
     fullName() {
-      return `${this.firstName} ${this.firstName}`;
+      return `${this.firstName} ${this.lastName}`;
     },
 
     coachContactLink() {
