@@ -1,5 +1,5 @@
 <template>
-  <div class="registeration"> 
+  <div class="registeration d-flex justify-content-center align-items-center"> 
     <b-container>
       <b-row class="justify-content-center my-5">
         <b-col cols="9">
