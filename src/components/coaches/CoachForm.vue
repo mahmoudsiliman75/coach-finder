@@ -62,6 +62,8 @@
 
 <script>
 export default {
+  emits: ['save-data'],
+
   data() {
     return {
       firstName: '',
@@ -74,7 +76,10 @@ export default {
 
   methods: {
     showAlert() {
-      this.$swal('Registered');
+      this.$swal({
+        icon: 'success',
+        title: 'Registered Successfuly',
+      });
     },
 
     submitForm() {
@@ -92,7 +97,7 @@ export default {
       this.descripion = '';
       this.areas = [];
 
-      console.log(formData);
+      this.$emit('save-data', formData);
 
       this.showAlert()
     }
