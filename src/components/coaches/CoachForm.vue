@@ -2,7 +2,7 @@
   <form @submit.prevent="submitForm">
     <b-row>
       <b-col cols="12" md="6" class="mb-4">
-        <div class="form_controle" :class= '!firstName.isValid ?  "invalid" : ""'>
+        <div class="form_controle" :class= ' !firstName.isValid ?  "invalid" : "" '>
           <input type="text" placeholder="First Name" id="first_name" v-model.trim="firstName.val">
           <icon name="pencil-alt" size="18px" color="#777"></icon>
         </div>

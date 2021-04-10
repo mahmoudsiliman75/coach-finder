@@ -23,7 +23,7 @@
         >
           <section>
             <base-card>
-              <header class="mb-4">
+              <header class="mb-4" v-if="!this.$route.path.includes('/contact')">
                 <h2> Interested? Reach Out Now! </h2>
                 <router-link :to="contactLink" class="btn btn-outline-info"> Contact </router-link>
               </header>
