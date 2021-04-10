@@ -30,8 +30,6 @@
 
 <script>
 export default {
-  props: ['id'],
-
   data() {
     return {
       selectedCoach: null,
