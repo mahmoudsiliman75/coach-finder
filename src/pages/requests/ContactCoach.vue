@@ -83,6 +83,14 @@ export default {
         this.email.val = '';
         this.message.val = '';
       }
+
+      this.$store.dispatch('requests/contactCoach', {
+        email: this.email,
+        message: this.message,
+        coachId: this.$route.params.id,
+      });
+
+      this.$router.replace('/coaches'); 
     },
   },
 
