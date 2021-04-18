@@ -1,11 +1,11 @@
 export default {
   contactCoach(context, payload) {
-    const NewRequest = {
+    const newRequest = {
       id: new Date().toISOString(),
       coachId: payload.coachId,
       userEmail: payload.email,
       message: payload.message,
     };
-    context.commit('addRequest', NewRequest);
+    context.commit('addRequest', newRequest);
   }
 };
